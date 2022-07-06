@@ -100,13 +100,10 @@ impl Signaller {
         //     .unwrap()
         //     .clone();
 
-        let url = env::var("WHIPURL")?;
-
-        println!("foo {}", url);
-        // match env::var("WHIPURL") {
-        //     Ok(val) => println!("{key}: {val:?}"),
-        //     Err(e) => println!("couldn't interpret {key}: {e}"),
-        // }
+        let url = match env::var("WHIPURL") {
+            Ok(val) => val,
+            Err(_) => return Err(Error::msg("WHIPURL env var required for operation")),
+        };
 
         let send_task_handle = task::spawn(async move {
             let mut loc: Option<String> = None;
