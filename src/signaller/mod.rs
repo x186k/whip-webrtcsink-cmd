@@ -1,7 +1,7 @@
+use webrtcsink::webrtcsink::{Signallable, WebRTCSink};
 use gst::glib;
 use gst::subclass::prelude::ObjectSubclassExt;
 use std::error::Error;
-use webrtcsink::webrtcsink::{Signallable, WebRTCSink};
 
 mod imp;
 
@@ -54,6 +54,12 @@ impl Signallable for Signaller {
         signaller.consumer_removed(element, peer_id);
     }
 }
+
+// impl Default for Signaller {
+//     fn default() -> Self {
+//         glib::Object::new(&[]).unwrap()
+//     }
+// }
 
 impl Signaller {
     pub fn new() -> Self {
