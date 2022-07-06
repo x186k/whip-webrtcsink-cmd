@@ -210,7 +210,8 @@ impl Signaller {
         task::spawn(async move {
             let this = Self::from_instance(&this);
             if let Err(err) = this.connect(&element_clone).await {
-                element_clone.handle_signalling_error(err.into());
+                //element_clone.handle_signalling_error(err.into());
+                panic!("fail: {}", err.to_string());
             }
         });
     }
