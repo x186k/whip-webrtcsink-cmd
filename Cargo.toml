@@ -11,3 +11,8 @@ anyhow = "1"
 gst = { package = "gstreamer", git = "https://gitlab.freedesktop.org/gstreamer/gstreamer-rs" }
 gst-webrtc = { package = "gstreamer-webrtc", git = "https://gitlab.freedesktop.org/gstreamer/gstreamer-rs" }
 webrtcsink = { git = "https://github.com/centricular/webrtcsink.git" }
+once_cell = "1.0"
+thiserror = "1"
+futures = "0.3"
+async-std = { version = "1", features = ["unstable"] }
+surf = "2.3.2"
