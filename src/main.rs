@@ -11,7 +11,8 @@ fn main() -> Result<(), Error> {
 
     let pipeline = gst::Pipeline::new(None);
 
-    let vsrc = gst::ElementFactory::make("videotestsrc", None).unwrap();
+    // let vsrc =        gst::ElementFactory::make_with_properties("videotestsrc", &[("", &"".to_value())]).unwrap();
+    let vsrc = gst::parse_launch("videotestsrc pattern=ball")?;
 
     pipeline
         .add_many(&[&vsrc, webrtcsink.upcast_ref()])
