@@ -11,8 +11,8 @@ signaller implementation.
 
 Run with:
 
-``` shell
-GST_DEBUG=webrtcsink:4 RUST_BACKTRACE=1 WHIPURL=http://192.168.86.3:7080/whip/endpoint/foo cargo run
+```shell
+WHIPURL=http://192.168.86.3:7080/whip/endpoint/foo cargo run
 ```
 
 If you have a valid WHIP endpoint at WHIPURL, you that endpoint will receive a video stream of the
@@ -29,6 +29,6 @@ Some notes:
 
 You can see more output when you run like:
 
-``` shell
+```shell
 GST_DEBUG=webrtcsink:4 RUST_BACKTRACE=1 WHIPURL=http://192.168.86.3:7080/whip/endpoint/foo cargo run
 ```
