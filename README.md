@@ -23,7 +23,7 @@ Some notes:
 * This repo does NOT generate a gStreamer plugin that allows WHIP to be used with `webrtcsink`, but an executable.
 * This has been tested with Janus and Janus' simple-whip-server and the videoroom plugin, and does work in this scenarion.
 * This uses a timer to collect ICE candidates, form a full SDP, and does not use the WHIP PATCH HTTP request to send candidates one at a time.
-* This is an early nascent implementation of WHIP, and probably could use some tweaks for production environments.
+* This is an early nascent proof of concept of combining WHIP `webrtcsink`, and probably could use some tweaks for production environments.
 * The HTTP DELETE request under WHIP may need some work.
 
 
